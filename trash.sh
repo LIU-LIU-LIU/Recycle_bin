@@ -1,5 +1,10 @@
 #!/bin/bash
-
-TarshDir="~/trash/.trash"
+Dir=`echo ~`
+TarshDir="$Dir/trash/.trash"
 FileName=`date +%s`
-mv $* $TarshDir/$FileName.$*
+if [ -z "$2" ]
+then
+	mv $1 $TarshDir/$FileName.$1
+else
+	mv $2 $TarshDir/$FileName.$2
+fi
