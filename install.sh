@@ -35,7 +35,7 @@ then
 	read aha
 else
 	echo -e "\033[47;34m 安装失败！请检查下载文件完整性和本脚本是否有执行权限 \033[0m"
-	echo -e "\033[47;34m 尝试重新拉取文件？（wget https://github.com/LIU-LIU-LIU/Recycle_bin.git） \033[0m"
+	echo -e "\033[47;34m 尝试重新拉取文件？（git clone https://github.com/LIU-LIU-LIU/Recycle_bin.git） \033[0m"
 	exit 1
 fi
 }
