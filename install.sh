@@ -1,11 +1,12 @@
 #!/bin/bash
 Dir=`echo ~`
 install(){
-mkdir ~/trash/.trash
-cp trash.sh ~/trash/
-chmod +x ~/trash/trash.sh
-echo "alias rm='$Dir/trash/trash.sh'" >> ~/.bashrc
-source ~/.bashrc
+mkdir $Dir/trash/.trash
+cp trash.sh $Dir/trash/
+chmod +x $Dir/trash/trash.sh
+echo "alias rm='$Dir/trash/trash.sh'" >> $Dir/.bashrc
+sleep 1s
+source $Dir/.bashrc
 while true
 do
 
