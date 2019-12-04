@@ -5,7 +5,7 @@ mkdir $Dir/trash/.trash
 cp trash.sh $Dir/trash/
 chmod +x $Dir/trash/trash.sh
 grep "trash" "$Dir/.bashrc"
-if [ "$?" ];then
+if [ "$?" == "0" ];then
 	echo "别名已存在，跳过此配置。"
 else
 	echo "alias rm='$Dir/trash/trash.sh'" >> $Dir/.bashrc

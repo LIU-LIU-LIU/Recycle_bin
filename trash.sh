@@ -20,11 +20,12 @@ case $1 in
 ;;
 *)
 	mkdir "$TarshDir"/"$FileNamePrefix"
-	mv "$@" "$TarshDir"/"$FileNamePrefix"/
-	if [ "$?" ] ; then
+	/usr/bin/mv -i "$@" ""$TarshDir"/"$FileNamePrefix"/"
+	if [ "$?" == "0" ] ; then
 		echo "已将"$@"移动至回收站("$TarshDir"/"$FileNamePrefix"/)"
 	else
 		echo -e "\033[31;47m 移动至回收站失败。\033[0m"
+		/bin/rm -rf "$TarshDir"/"$FileNamePrefix"
 	fi 
 ;;
 esac
