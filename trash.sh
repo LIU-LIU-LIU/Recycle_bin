@@ -1,20 +1,37 @@
 #!/bin/bash
-Dir=`echo ~`
-TarshDir="$Dir/trash/.trash"
-FileName=`date +%s`
-if [ -z "$2" ]
-then
-	if [ "$1" == '/' ];then
-		echo "此操作风险太高，已禁止！"
+#一个简易回收站
+
+TarshDir="`echo ~`/trash/.trash"
+FileNamePrefix=`date +%y-%m-%d-%k-%M-%S`
+
+error(){
+echo -e "\033[31;47m错误!可能原因:\n提供了空的参数;\n移动至回收站不需要任何命令选项。  \033[0m"
+exit 1
+}
+
+tarsh(){
+case $1 in
+-*|./)
+	error
+;;
+/)
+	echo -e "\033[31;47m 此操作风险太高,已禁止! \033[0m"
+	exit 1
+;;
+*)
+	mkdir "$TarshDir"/"$FileNamePrefix"
+	mv "$@" "$TarshDir"/"$FileNamePrefix"/
+	if [ "$?" ] ; then
+		echo "已将"$@"移动至回收站("$TarshDir"/"$FileNamePrefix"/)"
 	else
-		mv $1 $TarshDir/$FileName.$1
-		echo "移动至回收站成功($TarshDir/$FileName.$1)"
-	fi
+		echo -e "\033[31;47m 移动至回收站失败。\033[0m"
+	fi 
+;;
+esac
+}
+
+if [ -z "$1" ];then
+        error
 else
-	if [ "$2" == '/' ];then
-                echo "此操作风险太高，已禁止！"
-	else
-		mv $2 $TarshDir/$FileName.$2
-		echo "移动至回收站成功($TarshDir/$FileName.$2)"
-        fi
+        tarsh $*
 fi
