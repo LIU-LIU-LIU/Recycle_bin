@@ -10,13 +10,11 @@
 #ls
 dahuw  fdauijdiaejhf  jeh  ns  scn  shfisn  uifhsuiueh  vk
 #rm *
-已将dahuw fdauijdiaejhf jeh ns scn shfisn uifhsuiueh vk移动至回收站(/root/trash/.trash/19-12-04-17:13:38/)
+已将dahuw fdauijdiaejhf jeh ns scn shfisn uifhsuiueh vk移动至回收站(/root/trash/.trash/19-12-04-17-13-38/)
 #rm .././test/*
-.././test/dahuw .././test/fdauijdiaejhf .././test/jeh .././test/ns .././test/scn .././test/shfisn .././test/uifhsuiueh .././test/vk
 已将.././test/dahuw .././test/fdauijdiaejhf .././test/jeh .././test/ns .././test/scn .././test/shfisn .././test/uifhsuiueh .././test/vk移动至回收站(/root/trash/.trash/19-12-04-17-14-43/)
 ```
---- 
-
+  
 ```shell
 #rm /
  此操作风险太高,已禁止! 
