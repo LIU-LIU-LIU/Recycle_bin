@@ -37,7 +37,7 @@ done
 if [ -f "$Dir/trash/trash.sh" ]
 then
 	echo -e "\033[47;34m 已经完成安装，回收站程序在$Dir/trash/trash.sh 回收站目录在:$Dir/trash/.trash \033[0m"
-	echo -e "\033[47;34m  回车后完成安装  \033[0m"
+	echo -e "\033[47;34m  别名需要重新登入终端生效。回车后完成安装  \033[0m"
 	read aha
 else
 	echo -e "\033[47;34m 安装失败！请检查下载文件完整性和本脚本是否有执行权限 \033[0m"
