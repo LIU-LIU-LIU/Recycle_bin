@@ -21,7 +21,8 @@ do
 	        echo -e "\033[47;34m 本功能调用crontab实现定时计划  \033[0m"
 		echo -e "\033[47;34m  使用时请参考crontab手册  \033[0m"
 		echo -e "\033[47;34m  请在以下直接输入内容，例如：（01 00 * * * rm -rf $Dir/trash/.trash/*）在每天的00点01分清空回收站的文件  \033[0m"
-		read -p  "回车确认，如果输错或者不想添加请(ctrl+c)终止" task
+		echo -e "\033[47;34m 回车确认，如果输错或者不想添加请(ctrl+c)终止:  \033[0m"
+                read task
 		echo  "$task" >> /var/spool/cron/root
 		source ~/.bashrc
 		break
