@@ -2,7 +2,7 @@
 #一个简易回收站
 
 TarshDir="`echo ~`/trash/.trash"
-FileNamePrefix=`date +%y-%m-%d-%k-%M-%S`
+FileNamePrefix=`date +%y-%m-%d-%H-%M-%S`
 
 error(){
 echo -e "\033[31;47m错误!可能原因:\n提供了空的参数;\n移动至回收站不需要任何命令选项。格式:rm [文件]  \033[0m"
