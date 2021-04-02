@@ -5,7 +5,7 @@ TarshDir="`echo ~`/trash/.trash"
 FileNamePrefix=`date +%y-%m-%d-%H-%M-%S`
 
 error(){
-echo -e "\033[36m 错误!\n移动至回收站不需要任何命令选项。格式:rm [文件]  \033[0m"
+echo -e "\033[31m 错误!\n移动至回收站不需要任何命令选项。格式:rm [文件]  \033[0m"
 exit 1
 }
 
@@ -15,7 +15,7 @@ case $1 in
 	error
 ;;
 /)
-	echo -e "\033[36m 此操作风险太高,已禁止! \033[0m"
+	echo -e "\033[31m 此操作风险太高,已禁止! \033[0m"
 	exit 1
 ;;
 *)
@@ -24,7 +24,7 @@ case $1 in
 	if [ "$?" == "0" ] ; then
 		echo "已将"$@"移动至回收站("$TarshDir"/"$FileNamePrefix"/)"
 	else
-		echo -e "\033[36m 移动至回收站失败。\033[0m"
+		echo -e "\033[31m 移动至回收站失败。\033[0m"
 		/bin/rm -rf "$TarshDir"/"$FileNamePrefix"
 	fi 
 ;;
