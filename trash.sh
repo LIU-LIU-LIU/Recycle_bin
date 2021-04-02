@@ -5,7 +5,7 @@ TarshDir="`echo ~`/trash/.trash"
 FileNamePrefix=`date +%y-%m-%d-%H-%M-%S`
 
 error(){
-echo -e "\033[31;47m错误!可能原因:\n提供了空的参数;\n移动至回收站不需要任何命令选项。格式:rm [文件]  \033[0m"
+echo -e "\033[31;47m错误!\n移动至回收站不需要任何命令选项。格式:rm [文件]  \033[0m"
 exit 1
 }
 
@@ -19,7 +19,7 @@ case $1 in
 	exit 1
 ;;
 *)
-	mkdir "$TarshDir"/"$FileNamePrefix"
+	mkdir -p "$TarshDir"/"$FileNamePrefix"
 	/usr/bin/mv -i "$@" ""$TarshDir"/"$FileNamePrefix"/"
 	if [ "$?" == "0" ] ; then
 		echo "已将"$@"移动至回收站("$TarshDir"/"$FileNamePrefix"/)"
