@@ -1,5 +1,6 @@
 #!/bin/bash
 #一个简易回收站
+#https://github.com/LIU-LIU-LIU/Recycle_bin
 
 TarshDir="`echo ~`/trash/.trash"
 FileNamePrefix=`date +%y-%m-%d-%H-%M-%S`
