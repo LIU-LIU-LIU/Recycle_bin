@@ -1,4 +1,5 @@
 # Recycle_bin
+> https://github.com/LIU-LIU-LIU/Recycle_bin
 ## 此脚本是为了在Linux的环境下，模拟一个回收站。防止误操作出现问题。   
 原理非常简单，使用alisa为/bin/rm创建一个别名。
 ```shell
