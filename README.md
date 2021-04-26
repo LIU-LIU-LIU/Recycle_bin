@@ -5,7 +5,7 @@
 使用方法:
 文中\~代表当前用户，输入echo "\~"或者whoami查看
 ```shell
-#echo "alias rm=/Recycle_bin-master/trash.sh" >> ~/.bashrc
+#echo "alias rm=~/Recycle_bin-master/trash.sh" >> ~/.bashrc
 #source ~/.bashrc
 ```
 > 脚本路径请自己更改成下载路径，回收站目录在:~/trash/.trash   
